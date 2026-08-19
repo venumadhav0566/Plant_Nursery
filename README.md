@@ -440,6 +440,7 @@ You are free to modify and extend the project for learning and portfolio purpose
 ## 👨‍💻 Author
 
 **Venu Madhava Reddy**
+
 [**Email**](venumadhavareddy29@gmail.com),
 
 [**GitHub**](https://github.com/venumadhav0566),
