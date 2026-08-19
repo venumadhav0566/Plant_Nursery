@@ -440,8 +440,10 @@ You are free to modify and extend the project for learning and portfolio purpose
 ## 👨‍💻 Author
 
 **Venu Madhava Reddy**
-[**Email**](venumadhavareddy29@gmail.com)
-[**GitHub**](https://github.com/venumadhav0566)
+[**Email**](venumadhavareddy29@gmail.com),
+
+[**GitHub**](https://github.com/venumadhav0566),
+
 [**Linkedin**](https://www.linkedin.com/in/thanneru-venu-madhava-reddy/)
 
 🌿 GreenLeaf Plant Nursery
