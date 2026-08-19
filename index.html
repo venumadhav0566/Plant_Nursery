@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenLeaf Plant Nursery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🌿 Green<span>Leaf</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#plants">Plants</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-icons">
+
+        <button onclick="openSearch()">
+            <i class="fa-solid fa-search"></i>
+        </button>
+
+        <button onclick="showWishlist()">
+            <i class="fa-regular fa-heart"></i>
+            <span id="wishlistCount">0</span>
+        </button>
+
+        <button onclick="openCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-box" id="searchBox">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search plants..."
+        onkeyup="searchPlants()">
+
+    <button onclick="closeSearch()">✕</button>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            WELCOME TO GREENLEAF
+        </p>
+
+        <h1>
+            Bring Nature
+            <br>
+            <span>Into Your Home</span>
+        </h1>
+
+        <p>
+            Discover beautiful indoor and outdoor plants,
+            pots and gardening essentials.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#plants" class="btn">
+                Shop Plants
+            </a>
+
+            <a href="#categories" class="btn-outline">
+                Explore Categories
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        🌿
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+
+        <i class="fa-solid fa-truck"></i>
+
+        <div>
+            <h3>Free Delivery</h3>
+            <p>On orders above ₹499</p>
+        </div>
+
+    </div>
+
+    <div class="feature">
+
+        <i class="fa-solid fa-seedling"></i>
+
+        <div>
+            <h3>Healthy Plants</h3>
+            <p>Fresh nursery plants</p>
+        </div>
+
+    </div>
+
+    <div class="feature">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <div>
+            <h3>Eco Friendly</h3>
+            <p>Sustainable gardening</p>
+        </div>
+
+    </div>
+
+    <div class="feature">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <div>
+            <h3>Support</h3>
+            <p>Expert plant guidance</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="section" id="categories">
+
+    <div class="section-title">
+
+        <p>SHOP BY CATEGORY</p>
+
+        <h2>Find Your Perfect Plant</h2>
+
+    </div>
+
+    <div class="categories">
+
+        <div
+            class="category-card"
+            onclick="filterCategory('Indoor')">
+
+            <div class="category-icon">
+                🪴
+            </div>
+
+            <h3>Indoor Plants</h3>
+
+            <p>
+                Beautiful plants for your home
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            onclick="filterCategory('Outdoor')">
+
+            <div class="category-icon">
+                🌳
+            </div>
+
+            <h3>Outdoor Plants</h3>
+
+            <p>
+                Plants for gardens & balconies
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            onclick="filterCategory('Flowering')">
+
+            <div class="category-icon">
+                🌺
+            </div>
+
+            <h3>Flowering Plants</h3>
+
+            <p>
+                Add color to your garden
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            onclick="filterCategory('Succulent')">
+
+            <div class="category-icon">
+                🌵
+            </div>
+
+            <h3>Succulents</h3>
+
+            <p>
+                Low-maintenance plants
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="section products-section" id="plants">
+
+    <div class="section-title">
+
+        <p>OUR COLLECTION</p>
+
+        <h2>Popular Plants</h2>
+
+    </div>
+
+
+    <div class="filter-buttons">
+
+        <button
+            onclick="filterCategory('All')"
+            class="active">
+            All
+        </button>
+
+        <button onclick="filterCategory('Indoor')">
+            Indoor
+        </button>
+
+        <button onclick="filterCategory('Outdoor')">
+            Outdoor
+        </button>
+
+        <button onclick="filterCategory('Flowering')">
+            Flowering
+        </button>
+
+        <button onclick="filterCategory('Succulent')">
+            Succulent
+        </button>
+
+    </div>
+
+
+    <div class="products" id="products">
+
+
+        <!-- SNAKE PLANT -->
+
+        <div class="product-card" data-category="Indoor">
+
+            <div class="product-image">
+
+                🪴
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist('Snake Plant')">
+                    ♡
+                </button>
+
+                <span class="badge">
+                    Best Seller
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Indoor Plant
+                </p>
+
+                <h3>
+                    Snake Plant
+                </h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(124)</span>
+                </div>
+
+                <div class="price">
+                    ₹399
+                    <del>₹499</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Snake Plant',399)">
+                    Add to Cart
+                </button>
+
+                <button
+                    class="buy-now"
+                    onclick="buyNow('Snake Plant',399)">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MONEY PLANT -->
+
+        <div class="product-card" data-category="Indoor">
+
+            <div class="product-image">
+
+                🌿
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist('Money Plant')">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Indoor Plant
+                </p>
+
+                <h3>
+                    Money Plant
+                </h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(98)</span>
+                </div>
+
+                <div class="price">
+                    ₹249
+                    <del>₹299</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Money Plant',249)">
+                    Add to Cart
+                </button>
+
+                <button
+                    class="buy-now"
+                    onclick="buyNow('Money Plant',249)">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARECA PALM -->
+
+        <div class="product-card" data-category="Outdoor">
+
+            <div class="product-image">
+
+                🌳
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist('Areca Palm')">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Outdoor Plant
+                </p>
+
+                <h3>
+                    Areca Palm
+                </h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(76)</span>
+                </div>
+
+                <div class="price">
+                    ₹599
+                    <del>₹699</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Areca Palm',599)">
+                    Add to Cart
+                </button>
+
+                <button
+                    class="buy-now"
+                    onclick="buyNow('Areca Palm',599)">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ROSE -->
+
+        <div class="product-card" data-category="Flowering">
+
+            <div class="product-image">
+
+                🌺
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist('Rose Plant')">
+                    ♡
+                </button>
+
+                <span class="badge">
+                    New
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Flowering Plant
+                </p>
+
+                <h3>
+                    Rose Plant
+                </h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(112)</span>
+                </div>
+
+                <div class="price">
+                    ₹299
+                    <del>₹399</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Rose Plant',299)">
+                    Add to Cart
+                </button>
+
+                <button
+                    class="buy-now"
+                    onclick="buyNow('Rose Plant',299)">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ALOE VERA -->
+
+        <div class="product-card" data-category="Succulent">
+
+            <div class="product-image">
+
+                🌵
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist('Aloe Vera')">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Succulent
+                </p>
+
+                <h3>
+                    Aloe Vera
+                </h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(145)</span>
+                </div>
+
+                <div class="price">
+                    ₹199
+                    <del>₹249</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Aloe Vera',199)">
+                    Add to Cart
+                </button>
+
+                <button
+                    class="buy-now"
+                    onclick="buyNow('Aloe Vera',199)">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIBISCUS -->
+
+        <div class="product-card" data-category="Flowering">
+
+            <div class="product-image">
+
+                🌷
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist('Hibiscus')">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">
+                    Flowering Plant
+                </p>
+
+                <h3>
+                    Hibiscus
+                </h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(87)</span>
+                </div>
+
+                <div class="price">
+                    ₹349
+                    <del>₹449</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Hibiscus',349)">
+                    Add to Cart
+                </button>
+
+                <button
+                    class="buy-now"
+                    onclick="buyNow('Hibiscus',349)">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+        🌱
+    </div>
+
+    <div class="about-content">
+
+        <p class="small-title">
+            ABOUT GREENLEAF
+        </p>
+
+        <h2>
+            Growing Happiness,
+            <br>
+            One Plant At A Time
+        </h2>
+
+        <p>
+            GreenLeaf is an online plant nursery dedicated
+            to making gardening simple and enjoyable.
+        </p>
+
+        <p>
+            We provide healthy plants, beautiful pots,
+            organic fertilizers and gardening essentials.
+        </p>
+
+        <button class="btn">
+            Learn More
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <h2>
+        Get Plant Care Tips 🌿
+    </h2>
+
+    <p>
+        Subscribe to receive gardening tips and special offers.
+    </p>
+
+    <div class="subscribe">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email">
+
+        <button onclick="subscribe()">
+            Subscribe
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact section" id="contact">
+
+    <div class="section-title">
+
+        <p>GET IN TOUCH</p>
+
+        <h2>
+            Contact Us
+        </h2>
+
+    </div>
+
+    <form onsubmit="contactSubmit(event)">
+
+        <input
+            type="text"
+            placeholder="Your Name"
+            required>
+
+        <input
+            type="email"
+            placeholder="Your Email"
+            required>
+
+        <input
+            type="text"
+            placeholder="Subject"
+            required>
+
+        <textarea
+            placeholder="Your Message"
+            required></textarea>
+
+        <button class="btn">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <div class="logo">
+                🌿 Green<span>Leaf</span>
+            </div>
+
+            <p>
+                Bringing nature closer to your home.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="#home">Home</a>
+            <a href="#plants">Plants</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Bangalore, India
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                ✉️ support@greenleaf.com
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 GreenLeaf Plant Nursery.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="modal" id="cartModal">
+
+    <div class="modal-content">
+
+        <button
+            class="close"
+            onclick="closeCart()">
+            ✕
+        </button>
+
+        <h2>
+            🛒 Your Cart
+        </h2>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+
+            <strong>
+                Total:
+            </strong>
+
+            <span id="cartTotal">
+                ₹0
+            </span>
+
+        </div>
+
+        <button
+            class="checkout"
+            onclick="checkout()">
+
+            Proceed to Checkout
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PAYMENT MODAL ================= -->
+
+<div
+    class="payment-modal"
+    id="paymentModal">
+
+    <div class="payment-box">
+
+        <button
+            class="payment-close"
+            onclick="closePayment()">
+            ✕
+        </button>
+
+
+        <div class="payment-icon">
+            💳
+        </div>
+
+
+        <h2>
+            Complete Your Order
+        </h2>
+
+
+        <p id="paymentProduct">
+            Plant
+        </p>
+
+
+        <div class="payment-amount">
+
+            ₹<span id="paymentAmount">
+                0
+            </span>
+
+        </div>
+
+
+        <!-- PAYMENT METHODS -->
+
+        <div class="payment-method">
+
+            <h3>
+                Choose Payment Method
+            </h3>
+
+
+            <div class="payment-options">
+
+                <button
+                    class="payment-option active"
+                    id="upiOption"
+                    onclick="selectPayment('upi')">
+
+                    <span>
+                        📱
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            UPI Payment
+                        </strong>
+
+                        <small>
+                            Google Pay / PhonePe / Paytm
+                        </small>
+
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="payment-option"
+                    id="codOption"
+                    onclick="selectPayment('cod')">
+
+                    <span>
+                        💵
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Cash on Delivery
+                        </strong>
+
+                        <small>
+                            Pay when delivered
+                        </small>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- UPI PAYMENT -->
+
+        <div id="upiPayment">
+
+            <label>
+                Enter UPI ID
+            </label>
+
+            <input
+                type="text"
+                id="upiId"
+                placeholder="example@upi">
+
+
+            <div class="upi-apps">
+
+                <button onclick="selectUpiApp('Google Pay')">
+                    GPay
+                </button>
+
+                <button onclick="selectUpiApp('PhonePe')">
+                    PhonePe
+                </button>
+
+                <button onclick="selectUpiApp('Paytm')">
+                    Paytm
+                </button>
+
+            </div>
+
+
+            <button
+                class="pay-button"
+                onclick="processUpiPayment()">
+
+                Pay ₹<span id="payButtonAmount">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- COD PAYMENT -->
+
+        <div
+            id="codPayment"
+            style="display:none">
+
+            <div class="cod-message">
+
+                <div class="cod-icon">
+                    📦
+                </div>
+
+                <p>
+                    Pay cash when your plant
+                    is delivered.
+                </p>
+
+            </div>
+
+
+            <button
+                class="pay-button"
+                onclick="placeCodOrder()">
+
+                Place Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
