@@ -220,13 +220,13 @@ Contains:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/GreenLeaf-Plant-Nursery.git
+git clone https://github.com/venumadhav0566/Plant_Nursery/tree/main
 ```
 
 ### 2. Open the Project
 
 ```bash
-cd GreenLeaf-Plant-Nursery
+cd Plant Nursery-Plant-Nursery
 ```
 
 ### 3. Run the Website
@@ -440,6 +440,9 @@ You are free to modify and extend the project for learning and portfolio purpose
 ## 👨‍💻 Author
 
 **Venu Madhava Reddy**
+[**Email**](venumadhavareddy29@gmail.com)
+[**GitHub**](https://github.com/venumadhav0566)
+[**Linkedin**](https://www.linkedin.com/in/thanneru-venu-madhava-reddy/)
 
 🌿 GreenLeaf Plant Nursery
 📍 Bangalore, India
